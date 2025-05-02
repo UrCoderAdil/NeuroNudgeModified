@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Home item -->
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:iconTint="@color/selector_bottom_nav"
+        android:title="Home"
+        app:itemTextColor="@color/selector_bottom_nav" />
+
+    <!-- Add item -->
+    <item
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/ic_exercise"
+        android:title="Meditation"
+        android:iconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+
+    <!-- Search item -->
+    <item
+        android:id="@+id/navigation_search"
+        android:icon="@drawable/ic_dashboard"
+        android:title="HealthDialog"
+        android:iconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+
+    <!-- Profile item -->
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/ic_person"
+        android:title="Profile"
+        android:iconTint="@color/selector_bottom_nav"
+        app:itemTextColor="@color/selector_bottom_nav" />
+
+</menu>

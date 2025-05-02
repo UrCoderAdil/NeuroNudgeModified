@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginEnd="12dp"
+    android:background="@drawable/iem_background"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/videoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Video Title"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="4dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <VideoView
+            android:id="@+id/recyclerVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/recyclerVideoPlayPause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_media_pause" />
+    </FrameLayout>
+</LinearLayout>

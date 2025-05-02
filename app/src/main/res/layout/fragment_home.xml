@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackgroundColor"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- GPT Response Box -->
+<TextView
+android:id="@+id/gptResponseBox"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="1"
+android:background="@drawable/bg_response"
+android:padding="16dp"
+android:text="GPT responses will appear here..."
+android:textColor="@color/PrimaryTextColor"
+android:textSize="16sp" />
+
+    <!-- GPT Prompt Input -->
+<EditText
+android:id="@+id/gptPromptInput"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Ask something..."
+android:background="@drawable/bg_prompt"
+android:padding="12dp"
+android:textColor="@color/PrimaryTextColor"
+android:textSize="16sp"
+android:layout_marginTop="12dp" />
+
+    </LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="gray_500">#9E9E9E</color>
+    <color name="gray_600">#757575</color>
+    <color name="splash_background">#6200EE</color>
+    <color name="dark_blue">#03055B</color>
+    <!-- Selected Color -->
+    <color name="colorSelected">#03055B</color> <!-- You can choose a color like Orange -->
+
+    <!-- Unselected Color -->
+    <color name="colorUnselected">#9CA3AF</color> <!-- You can choose a color like Grey -->
+    <color name="AppBackgroundColor"> #0B0F1A</color>
+        <color name="PrimaryTextColor">#E0E0E0</color> <!-- Light gray -->
+        <color name="HintTextColor">#FFFFFF</color> <!-- Soft gray for hints -->
+        <color name="CardBackground">#151A27</color> <!-- Slightly lighter than background -->
+    <color name="NeonBlue">#00FFFF</color>          <!-- Active item color (cyan neon) -->
+    <color name="DimGray">#FFFFFF</color>
+        <color name="colorPrimary">#7B61FF</color>
+        <color name="colorSecondary">#FF5EDC</color>
+        <color name="colorSurface">#1F1F1F</color>
+        <color name="error_red">#FF4B5C</color>
+        <color name="colorOnPrimary">#FFFFFF</color> <!-- Text on primary -->
+        <color name="colorOnBackground">#E0E0E0</color> <!-- Light text -->
+
+    <!-- Neon-style Accent Color -->
+    <color name="neonAccent">#00FF00</color> <!-- Neon Green Accent -->
+
+    <!-- Snackbar and Toast Background Color -->
+    <color name="snackbarBackground">#212121</color> <!-- Darker Background for Snackbar -->
+    <color name="toastTextColor">#FFFFFF</color> <!-- Bright text for Toasts -->
+
+    <!-- Progress Bar Accent -->
+    <color name="progressBarAccent">#00FF00</color>
+    <!-- Bottom Navigation Bar Item Icon Tint (Selected/Unselected) -->
+    <color name="bottomNavItemIconTint">#B0B3B8</color> <!-- Unselected Icon Color (Gray) -->
+    <color name="bottomNavItemIconTintSelected">#00FF00</color> <!-- Neon Green for Selected -->
+
+    <!-- Bottom Navigation Bar Item Text Color (Selected/Unselected) -->
+    <color name="bottomNavItemTextColor">#B0B3B8</color> <!-- Unselected Text Color (Gray) -->
+    <color name="bottomNavItemTextColorSelected">#00FF00</color>
+
+</resources>

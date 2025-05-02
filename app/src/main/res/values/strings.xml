@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">NeuroNudge</string>
+    <string name="email">"      Email"</string>
+    <string name="password">"      Password"</string>
+    <string name="confirm_password">"      Confirm Password"</string>
+    <string name="sign_up">"      Sign Up"</string>
+    <string name="already_have_account">Already have an account? login</string>
+    <string name="full_name">"      Full Name"</string>
+    <string name="change_profile_pic">"      Change Profile picture"</string>
+        <string name="fa_play">&#xf04b;</string> <!-- Unicode for Play icon -->
+        <string name="fa_pause">&#xf04c;</string> <!-- Unicode for Pause icon -->
+</resources>

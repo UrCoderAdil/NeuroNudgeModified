@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "671651296880",
+    "project_id": "nueronudge2",
+    "storage_bucket": "nueronudge2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671651296880:android:0e288364b19f2e9025e6b5",
+        "android_client_info": {
+          "package_name": "com.example.neuronudge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGAF9m8AXtspSVWmTK4tfWB0UR37m9BCo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

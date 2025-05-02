@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NeuroNudge" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="fontFamily">@font/inter</item>
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/AppBackgroundColor</item>
+
+        <!-- Set text colors -->
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSurface">@color/white</item>
+
+        <!-- Error and Snackbar customization -->
+        <item name="colorError">@color/error_red</item>
+
+        <!-- Accent neon style -->
+        <item name="colorAccent">@color/neonAccent</item>
+        <item name="android:textColorPrimary">@color/white</item>
+
+        <!-- Progress Bar Accent -->
+        <item name="colorControlActivated">@color/progressBarAccent</item>
+    </style>
+
+    <!-- Theme for NeuroNudge -->
+    <style name="Theme.NeuroNudge" parent="Base.Theme.NeuroNudge" />
+
+    <!-- Splash Screen Customization -->
+    <style name="SplashScreenTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Splash screen should have dark background and centered logo -->
+        <item name="android:windowBackground">@color/AppBackgroundColor</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="Widget.NeuroNudge.Button" parent="Widget.Material3.Button">
+        <!-- Use neon primary color for buttons -->
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Bottom Navigation Bar Style -->
+    <style name="Widget.NeuroNudge.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemIconTint">@color/bottomNavItemIconTint</item>
+        <item name="itemTextColor">@color/bottomNavItemTextColor</item>
+    </style>
+</resources>

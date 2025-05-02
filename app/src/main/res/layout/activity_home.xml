@@ -1,0 +1,36 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/AppBackgroundColor"
+    android:paddingTop="16dp"
+    tools:context=".HomeActivity">
+
+    <!-- Fragment container for navigation -->
+<androidx.fragment.app.FragmentContainerView
+android:id="@+id/nav_host_fragment_activity_home"
+android:name="androidx.navigation.fragment.NavHostFragment"
+android:layout_width="0dp"
+android:layout_height="0dp"
+app:defaultNavHost="true"
+app:navGraph="@navigation/nav_graph"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent"
+app:layout_constraintBottom_toTopOf="@id/bottom_navigation_menu" />
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+android:id="@+id/bottom_navigation_menu"
+android:layout_width="0dp"
+android:layout_height="wrap_content"
+android:background="@color/CardBackground"
+    app:itemIconTint="@color/selector_bottom_nav"
+    app:itemTextColor="@color/selector_bottom_nav"
+    app:menu="@menu/bottom_nav_menu"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@drawable/healthback">
+
+    <TextView
+        android:id="@+id/healthDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Health Details"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="12dp" />
+
+    <!-- Body Condition -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_body" />
+
+        <EditText
+            android:id="@+id/editBodyCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Body Condition (e.g. Weak, Fit)"
+            android:textColorHint="@color/colorOnBackground"
+            android:inputType="text"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Blood Pressure -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_bp" />
+
+        <EditText
+            android:id="@+id/editBloodPressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood Pressure (e.g. 120/80)"
+            android:textColorHint="@color/colorOnBackground"
+            android:inputType="text"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Sugar Level -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_sugar" />
+
+        <EditText
+            android:id="@+id/editSugarLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sugar Level (e.g. 110 mg/dL)"
+            android:textColorHint="@color/colorOnBackground"
+            android:inputType="number"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Diseases -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_die" />
+
+        <EditText
+            android:id="@+id/editDiseases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Current Diseases"
+            android:textColorHint="@color/colorOnBackground"
+            android:inputType="text"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Blood Group -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_blood_group" />
+
+        <EditText
+            android:id="@+id/editBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Blood Group (e.g. A+)"
+            android:textColorHint="@color/colorOnBackground"
+            android:inputType="text"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Medicines -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/ic_medicine" />
+
+        <EditText
+            android:id="@+id/editMedicines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Medicines Taking Regularly"
+            android:textColorHint="@color/colorOnBackground"
+            android:inputType="text"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/saveHealthInfoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Info"
+        android:backgroundTint="@color/PrimaryTextColor"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+</LinearLayout>
