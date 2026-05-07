@@ -34,7 +34,7 @@ public class MeditationFragment extends Fragment {
     private List<VideoTrack> videoList = new ArrayList<>();
 
     private VideoView meditationVideo;
-    private ImageButton playPauseButton, fullScreenButton;
+    private ImageButton playPauseButton;
     private boolean isPlaying = true;
 
     @Override

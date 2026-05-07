@@ -1,92 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/meditate"
-    android:padding="16dp"
+    android:background="@color/AppBackgroundColor"
     android:fillViewport="true">
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Main Meditation Video -->
+        <!-- Featured Video Banner -->
         <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
             android:id="@+id/videoContainer"
-            android:layout_marginBottom="16dp">
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
 
             <VideoView
                 android:id="@+id/meditationVideo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
+            <!-- Gradient overlay -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#66000000" />
+
+            <!-- Label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Featured Meditation"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.06"
+                android:background="#4D6366F1"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:layout_gravity="top|start"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="14dp" />
+
             <ImageButton
                 android:id="@+id/playPauseButton"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
                 android:layout_gravity="center"
-                android:background="@android:color/transparent"
-                android:src="@android:drawable/ic_media_pause" />
+                android:background="#806366F1"
+                android:src="@android:drawable/ic_media_pause"
+                android:padding="12dp"
+                android:contentDescription="Play or pause video" />
 
         </FrameLayout>
 
-        <!-- Relax with Nasheeds -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Relax with Nasheeds"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/nasheedRecyclerView"
+        <!-- Content sections -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:overScrollMode="never"
-            android:nestedScrollingEnabled="false" />
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="20dp">
 
-        <!-- Soothing Meditation Music -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Soothing Meditation Music"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+            <!-- Nasheeds Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/musicRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:overScrollMode="never"
-            android:nestedScrollingEnabled="false" />
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginEnd="8dp" />
 
-        <!-- Meditation Videos -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Watch Meditation Videos"
-            android:textSize="20sp"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Relax with Nasheeds"
+                    android:textSize="17sp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/videoRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:overScrollMode="never"
-            android:nestedScrollingEnabled="false" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nasheedRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- Meditation Music Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorSecondary"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Soothing Meditation Music"
+                    android:textSize="17sp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/musicRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- Videos Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="20dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Meditation Videos"
+                    android:textSize="17sp"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/videoRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
-

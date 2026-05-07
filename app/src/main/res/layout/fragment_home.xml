@@ -1,33 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/AppBackgroundColor"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:paddingHorizontal="16dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="12dp">
 
-    <!-- GPT Response Box -->
-<TextView
-android:id="@+id/gptResponseBox"
-android:layout_width="match_parent"
-android:layout_height="0dp"
-android:layout_weight="1"
-android:background="@drawable/bg_response"
-android:padding="16dp"
-android:text="GPT responses will appear here..."
-android:textColor="@color/PrimaryTextColor"
-android:textSize="16sp" />
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="20dp">
 
-    <!-- GPT Prompt Input -->
-<EditText
-android:id="@+id/gptPromptInput"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="Ask something..."
-android:background="@drawable/bg_prompt"
-android:padding="12dp"
-android:textColor="@color/PrimaryTextColor"
-android:textSize="16sp"
-android:layout_marginTop="12dp" />
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_app_logo"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NeuroNudge AI"
+                android:textColor="@color/PrimaryTextColor"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your mental wellness companion"
+                android:textColor="@color/colorOnBackground"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@color/colorSecondary"
+            android:backgroundTintMode="src_in" />
 
     </LinearLayout>
+
+    <!-- Response Box -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_response"
+        android:padding="16dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/gptResponseBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hi! I'm NeuroNudge AI.\n\nAsk me anything about mental wellness, mindfulness, stress relief, or how you're feeling today. I'm here to support you. 💙"
+            android:textColor="@color/PrimaryTextColor"
+            android:textSize="15sp"
+            android:lineSpacingExtra="4dp" />
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Input Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_prompt"
+        android:paddingStart="16dp"
+        android:paddingEnd="4dp"
+        android:paddingVertical="4dp">
+
+        <EditText
+            android:id="@+id/gptPromptInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ask something..."
+            android:hintTextColor="@color/HintTextColor"
+            android:background="@android:color/transparent"
+            android:textColor="@color/PrimaryTextColor"
+            android:textSize="15sp"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:imeOptions="actionDone"
+            android:paddingVertical="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sendButton"
+            style="@style/Widget.Material3.Button.Icon"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:padding="0dp"
+            app:icon="@drawable/add"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="20dp"
+            app:cornerRadius="22dp"
+            android:backgroundTint="@color/colorPrimary" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="160dp"
+    android:layout_width="150dp"
     android:layout_height="wrap_content"
     android:layout_marginEnd="12dp"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#00000000"
     app:cardCornerRadius="16dp"
-    app:cardElevation="6dp"
-    android:padding="12dp"
-    android:layout_marginBottom="12dp">
+    app:cardElevation="0dp"
+    app:strokeColor="#1AFFFFFF"
+    app:strokeWidth="1dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/iem_background"
-        android:gravity="center_horizontal">
+        android:background="@color/CardBackground"
+        android:gravity="center_horizontal"
+        android:padding="12dp">
 
         <ImageView
             android:id="@+id/audioImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/mpc"
-            android:background="@drawable/iem_background" />
+            android:src="@drawable/mpc" />
 
         <TextView
             android:id="@+id/audioTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Track Title"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
+            android:textColor="@color/PrimaryTextColor"
+            android:textSize="13sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:paddingTop="8dp" />
+            android:paddingTop="8dp"
+            android:maxLines="1"
+            android:ellipsize="end" />
 
-        <!-- Play/Pause Button -->
         <ImageButton
             android:id="@+id/audioPlayPauseButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="8dp"
-            android:background="@android:color/transparent"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/colorPrimary"
             android:src="@android:drawable/ic_media_play"
+            android:padding="6dp"
             android:contentDescription="Play or pause audio"
-            app:tint="@android:color/white" />
+            app:tint="@color/white" />
+
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
-

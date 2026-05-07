@@ -38,10 +38,7 @@ public class SplashActivity extends AppCompatActivity {
             handler.postDelayed(checkAuthRunnable, mp.getDuration() + 500);
         });
 
-        splashVideoView.setOnCompletionListener(mp -> {
-            isVideoCompleted = true;
-            checkLoginStatus();
-        });
+        splashVideoView.setOnCompletionListener(mp -> checkLoginStatus());
 
         // Fallback timer in case video fails to load
         handler.postDelayed(checkAuthRunnable, 3000);

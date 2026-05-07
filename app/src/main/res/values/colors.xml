@@ -1,47 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="blue_500">#2196F3</color>
+
+    <!-- ── Core Backgrounds ── -->
+    <color name="AppBackgroundColor">#080D1A</color>
+    <color name="CardBackground">#111827</color>
+    <color name="SurfaceColor">#1A2235</color>
+
+    <!-- ── Brand / Primary ── -->
+    <color name="colorPrimary">#6366F1</color>
+    <color name="dark_blue">#4F46E5</color>
+    <color name="colorPrimaryDark">#4338CA</color>
+
+    <!-- ── Accent / Secondary ── -->
+    <color name="colorSecondary">#22D3EE</color>
+    <color name="neonAccent">#22D3EE</color>
+
+    <!-- ── Text ── -->
     <color name="white">#FFFFFFFF</color>
+    <color name="PrimaryTextColor">#F1F5F9</color>
+    <color name="HintTextColor">#64748B</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnBackground">#94A3B8</color>
+
+    <!-- ── Status / Semantic ── -->
+    <color name="error_red">#EF4444</color>
+    <color name="progressBarAccent">#6366F1</color>
+    <color name="colorControlActivated">#6366F1</color>
+
+    <!-- ── Neutral / Utility ── -->
     <color name="black">#FF000000</color>
-    <color name="gray_500">#9E9E9E</color>
-    <color name="gray_600">#757575</color>
-    <color name="splash_background">#6200EE</color>
-    <color name="dark_blue">#03055B</color>
-    <!-- Selected Color -->
-    <color name="colorSelected">#03055B</color> <!-- You can choose a color like Orange -->
+    <color name="gray_500">#6B7280</color>
+    <color name="gray_600">#4B5563</color>
+    <color name="blue_500">#6366F1</color>
+    <color name="DimGray">#64748B</color>
 
-    <!-- Unselected Color -->
-    <color name="colorUnselected">#9CA3AF</color> <!-- You can choose a color like Grey -->
-    <color name="AppBackgroundColor"> #0B0F1A</color>
-        <color name="PrimaryTextColor">#E0E0E0</color> <!-- Light gray -->
-        <color name="HintTextColor">#FFFFFF</color> <!-- Soft gray for hints -->
-        <color name="CardBackground">#151A27</color> <!-- Slightly lighter than background -->
-    <color name="NeonBlue">#00FFFF</color>          <!-- Active item color (cyan neon) -->
-    <color name="DimGray">#FFFFFF</color>
-        <color name="colorPrimary">#7B61FF</color>
-        <color name="colorSecondary">#FF5EDC</color>
-        <color name="colorSurface">#1F1F1F</color>
-        <color name="error_red">#FF4B5C</color>
-        <color name="colorOnPrimary">#FFFFFF</color> <!-- Text on primary -->
-        <color name="colorOnBackground">#E0E0E0</color> <!-- Light text -->
+    <!-- ── Bottom Navigation ── -->
+    <color name="colorSelected">#6366F1</color>
+    <color name="colorUnselected">#4B5563</color>
+    <color name="bottomNavItemIconTint">#4B5563</color>
+    <color name="bottomNavItemIconTintSelected">#6366F1</color>
+    <color name="bottomNavItemTextColor">#4B5563</color>
+    <color name="bottomNavItemTextColorSelected">#6366F1</color>
 
-    <!-- Neon-style Accent Color -->
-    <color name="neonAccent">#00FF00</color> <!-- Neon Green Accent -->
-
-    <!-- Snackbar and Toast Background Color -->
-    <color name="snackbarBackground">#212121</color> <!-- Darker Background for Snackbar -->
-    <color name="toastTextColor">#FFFFFF</color> <!-- Bright text for Toasts -->
-
-    <!-- Progress Bar Accent -->
-    <color name="progressBarAccent">#00FF00</color>
-    <!-- Bottom Navigation Bar Item Icon Tint (Selected/Unselected) -->
-    <color name="bottomNavItemIconTint">#B0B3B8</color> <!-- Unselected Icon Color (Gray) -->
-    <color name="bottomNavItemIconTintSelected">#00FF00</color> <!-- Neon Green for Selected -->
-
-    <!-- Bottom Navigation Bar Item Text Color (Selected/Unselected) -->
-    <color name="bottomNavItemTextColor">#B0B3B8</color> <!-- Unselected Text Color (Gray) -->
-    <color name="bottomNavItemTextColorSelected">#00FF00</color>
+    <!-- ── Misc / Legacy ── -->
+    <color name="splash_background">#080D1A</color>
+    <color name="snackbarBackground">#1A2235</color>
+    <color name="toastTextColor">#F1F5F9</color>
+    <color name="colorSurface">#111827</color>
+    <color name="colorOnSurface">#F1F5F9</color>
 
 </resources>

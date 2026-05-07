@@ -1,155 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/AppBackgroundColor"
-    android:padding="16dp"
-    tools:context=".Fragments.ProfileFragment">
+    android:background="@color/AppBackgroundColor">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="32dp">
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
 
-        <!-- Profile Image -->
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profileImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:src="@drawable/ic_default_profile"
-            app:civ_border_width="3dp"
-            app:civ_border_color="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp" />
-
-        <!-- Name -->
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
+        <!-- Profile Header Banner -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="John Doe"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            app:layout_constraintTop_toBottomOf="@id/profileImage"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="12dp" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="36dp"
+            android:paddingBottom="28dp"
+            android:paddingHorizontal="20dp"
+            android:background="@color/CardBackground">
 
-        <!-- Email -->
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="wrap_content"
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_default_profile"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@color/colorPrimary"
+                android:layout_marginBottom="14dp" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/PrimaryTextColor"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="your@email.com"
+                android:textSize="13sp"
+                android:textColor="@color/colorOnBackground"
+                android:layout_marginBottom="16dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editProfileBtn"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Change Password"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13sp"
+                app:strokeColor="@color/colorPrimary"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+        <!-- Activities Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="johndoe@example.com"
-            android:textSize="14sp"
-            android:textColor="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@id/name"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="4dp" />
+            app:cardBackgroundColor="@color/CardBackground"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp">
 
-        <!-- Change Password Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/editProfileBtn"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_exercise"
+                        android:tint="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/activitiesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Activities"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/activitiesInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. Yoga, Journaling, Walking"
+                    android:hintTextColor="@color/HintTextColor"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:background="@color/SurfaceColor"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Medications Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Change Password"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textColor="@color/white"
-            app:strokeColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/email"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="12dp" />
+            app:cardBackgroundColor="@color/CardBackground"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp">
 
-        <!-- Divider -->
-        <View
-            android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="@android:color/darker_gray"
-            app:layout_constraintTop_toBottomOf="@id/editProfileBtn"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="24dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
 
-        <!-- Activities Title -->
-        <TextView
-            android:id="@+id/activitiesLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Activities"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/divider"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
 
-        <!-- Activities Input -->
-        <EditText
-            android:id="@+id/activitiesInput"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Enter activities (e.g., Yoga, Journaling)"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/white"
-            android:inputType="textMultiLine"
-            android:minLines="2"
-            android:padding="12dp"
-            app:layout_constraintTop_toBottomOf="@id/activitiesLabel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp" />
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_medicine"
+                        android:tint="@color/colorSecondary" />
 
-        <!-- Medications Title -->
-        <TextView
-            android:id="@+id/medicationsLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Medications"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/activitiesInput"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp" />
+                    <TextView
+                        android:id="@+id/medicationsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your Medications"
+                        android:textColor="@color/PrimaryTextColor"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="8dp" />
+                </LinearLayout>
 
-        <!-- Medications Input -->
-        <EditText
-            android:id="@+id/medicationsInput"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:hint="Enter medications (e.g., Paracetamol, Vitamin D)"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/white"
-            android:inputType="textMultiLine"
-            android:minLines="2"
-            android:padding="12dp"
-            app:layout_constraintTop_toBottomOf="@id/medicationsLabel"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="8dp" />
+                <EditText
+                    android:id="@+id/medicationsInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. Paracetamol, Vitamin D"
+                    android:hintTextColor="@color/HintTextColor"
+                    android:textColor="@color/PrimaryTextColor"
+                    android:background="@color/SurfaceColor"
+                    android:inputType="textMultiLine"
+                    android:minLines="2"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        <!-- Save Profile Button -->
+        <!-- Save Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/saveProfileBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-            android:textColor="@color/white"
-            app:strokeColor="@color/white"
-            app:layout_constraintTop_toBottomOf="@id/medicationsInput"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="16dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            style="@style/Widget.NeuroNudge.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Save Changes"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>
-
-

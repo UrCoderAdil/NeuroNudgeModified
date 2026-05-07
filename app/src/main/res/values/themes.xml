@@ -1,55 +1,86 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.NeuroNudge" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+    <style name="Base.Theme.NeuroNudge" parent="Theme.Material3.Dark.NoActionBar">
 
         <item name="android:fontFamily">@font/inter</item>
         <item name="fontFamily">@font/inter</item>
-        <item name="colorPrimary">@color/dark_blue</item>
+
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
         <item name="colorSecondary">@color/colorSecondary</item>
-
-        <!-- Background color -->
-        <item name="android:windowBackground">@color/AppBackgroundColor</item>
-
-        <!-- Set text colors -->
         <item name="colorOnPrimary">@color/colorOnPrimary</item>
-        <item name="colorOnSurface">@color/white</item>
+        <item name="colorOnSecondary">@color/colorOnPrimary</item>
 
-        <!-- Error and Snackbar customization -->
+        <!-- Surfaces -->
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorBackground">@color/AppBackgroundColor</item>
+        <item name="colorOnBackground">@color/PrimaryTextColor</item>
+
+        <!-- Window -->
+        <item name="android:windowBackground">@color/AppBackgroundColor</item>
+        <item name="android:statusBarColor">@color/AppBackgroundColor</item>
+        <item name="android:navigationBarColor">@color/CardBackground</item>
+
+        <!-- Text -->
+        <item name="android:textColorPrimary">@color/PrimaryTextColor</item>
+        <item name="android:textColorSecondary">@color/colorOnBackground</item>
+        <item name="android:textColorHint">@color/HintTextColor</item>
+
+        <!-- Error -->
         <item name="colorError">@color/error_red</item>
 
-        <!-- Accent neon style -->
-        <item name="colorAccent">@color/neonAccent</item>
-        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Controls -->
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">#1A6366F1</item>
 
-        <!-- Progress Bar Accent -->
-        <item name="colorControlActivated">@color/progressBarAccent</item>
     </style>
 
-    <!-- Theme for NeuroNudge -->
     <style name="Theme.NeuroNudge" parent="Base.Theme.NeuroNudge" />
 
-    <!-- Splash Screen Customization -->
-    <style name="SplashScreenTheme" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Splash screen should have dark background and centered logo -->
+    <!-- Splash -->
+    <style name="SplashScreenTheme" parent="Theme.Material3.Dark.NoActionBar">
         <item name="android:windowBackground">@color/AppBackgroundColor</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsTranslucent">true</item>
     </style>
 
-    <!-- Button Style -->
+    <!-- Buttons -->
     <style name="Widget.NeuroNudge.Button" parent="Widget.Material3.Button">
-        <!-- Use neon primary color for buttons -->
         <item name="backgroundTint">@color/colorPrimary</item>
         <item name="android:textColor">@color/colorOnPrimary</item>
-        <item name="cornerRadius">8dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:letterSpacing">0.02</item>
     </style>
 
-    <!-- Bottom Navigation Bar Style -->
+    <!-- Bottom Navigation -->
     <style name="Widget.NeuroNudge.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
-        <item name="itemIconTint">@color/bottomNavItemIconTint</item>
-        <item name="itemTextColor">@color/bottomNavItemTextColor</item>
+        <item name="itemIconTint">@color/selector_bottom_nav</item>
+        <item name="itemTextColor">@color/selector_bottom_nav</item>
+        <item name="itemBackground">@android:color/transparent</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.NeuroNudge.BottomNavIndicator</item>
     </style>
-</resources>
 
+    <style name="Widget.NeuroNudge.BottomNavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#1A6366F1</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.NeuroNudge.Indicator</item>
+    </style>
+
+    <style name="ShapeAppearance.NeuroNudge.Indicator" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Text Input -->
+    <style name="Widget.NeuroNudge.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/HintTextColor</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="hintTextColor">@color/colorPrimary</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+</resources>
